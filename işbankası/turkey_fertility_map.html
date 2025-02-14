@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7f66acbe966bcb3f704573fa594b7944 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_7f66acbe966bcb3f704573fa594b7944" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7f66acbe966bcb3f704573fa594b7944 = L.map(
+                "map_7f66acbe966bcb3f704573fa594b7944",
+                {
+                    center: [39.0, 35.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_035c0be03ba7eaba85efe7b75aa370b9 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_035c0be03ba7eaba85efe7b75aa370b9.addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+        function geo_json_42f0ae3ead5a30fb54404c42bfdf1d42_styler(feature) {
+            switch(feature.properties.Location) {
+                default:
+                    return {"color": "black", "fillColor": "orange", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_42f0ae3ead5a30fb54404c42bfdf1d42_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_42f0ae3ead5a30fb54404c42bfdf1d42 = L.geoJson(null, {
+                onEachFeature: geo_json_42f0ae3ead5a30fb54404c42bfdf1d42_onEachFeature,
+            
+                style: geo_json_42f0ae3ead5a30fb54404c42bfdf1d42_styler,
+        });
+
+        function geo_json_42f0ae3ead5a30fb54404c42bfdf1d42_add (data) {
+            geo_json_42f0ae3ead5a30fb54404c42bfdf1d42
+                .addData(data);
+        }
+            geo_json_42f0ae3ead5a30fb54404c42bfdf1d42_add({"features": [{"geometry": {"coordinates": [[[26.0, 36.0], [30.0, 36.0], [30.0, 39.0], [26.0, 39.0], [26.0, 36.0]]], "type": "Polygon"}, "properties": {"Location": "Aegean"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_42f0ae3ead5a30fb54404c42bfdf1d42.addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var marker_d6194677cd488652ca5c4e92769a512c = L.marker(
+                [36.0, 26.0],
+                {}
+            ).addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var div_icon_60c9dca5a508f9e3300ce54a09f24a31 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027background-color: white; padding: 5px; border-radius: 5px; font-size: 12px;\u0027\u003eAegean: 45.76\u003c/div\u003e"});
+            marker_d6194677cd488652ca5c4e92769a512c.setIcon(div_icon_60c9dca5a508f9e3300ce54a09f24a31);
+        
+    
+        var popup_5e7481f931ee09c3caae04cdaac2e48d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e6198ef22a20efdfb8ff544262fb4e96 = $(`<div id="html_e6198ef22a20efdfb8ff544262fb4e96" style="width: 100.0%; height: 100.0%;">Aegean: 45.76</div>`)[0];
+                popup_5e7481f931ee09c3caae04cdaac2e48d.setContent(html_e6198ef22a20efdfb8ff544262fb4e96);
+            
+        
+
+        marker_d6194677cd488652ca5c4e92769a512c.bindPopup(popup_5e7481f931ee09c3caae04cdaac2e48d)
+        ;
+
+        
+    
+    
+        function geo_json_a4e98bb70c16c2a7d386a2b4b830d9a6_styler(feature) {
+            switch(feature.properties.Location) {
+                default:
+                    return {"color": "black", "fillColor": "orange", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_a4e98bb70c16c2a7d386a2b4b830d9a6_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_a4e98bb70c16c2a7d386a2b4b830d9a6 = L.geoJson(null, {
+                onEachFeature: geo_json_a4e98bb70c16c2a7d386a2b4b830d9a6_onEachFeature,
+            
+                style: geo_json_a4e98bb70c16c2a7d386a2b4b830d9a6_styler,
+        });
+
+        function geo_json_a4e98bb70c16c2a7d386a2b4b830d9a6_add (data) {
+            geo_json_a4e98bb70c16c2a7d386a2b4b830d9a6
+                .addData(data);
+        }
+            geo_json_a4e98bb70c16c2a7d386a2b4b830d9a6_add({"features": [{"geometry": {"coordinates": [[[30.0, 36.0], [35.0, 36.0], [35.0, 39.0], [30.0, 39.0], [30.0, 36.0]]], "type": "Polygon"}, "properties": {"Location": "Central"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_a4e98bb70c16c2a7d386a2b4b830d9a6.addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var marker_6731f6d4738936a714b9096a160fa797 = L.marker(
+                [36.0, 30.0],
+                {}
+            ).addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var div_icon_b5979136daf6aae642e8e4b8de9a9be2 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027background-color: white; padding: 5px; border-radius: 5px; font-size: 12px;\u0027\u003eCentral: 45.09\u003c/div\u003e"});
+            marker_6731f6d4738936a714b9096a160fa797.setIcon(div_icon_b5979136daf6aae642e8e4b8de9a9be2);
+        
+    
+        var popup_6d140c935ad0f4e77043be62346cc514 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_36e94f6c9387126730f934e595e65b37 = $(`<div id="html_36e94f6c9387126730f934e595e65b37" style="width: 100.0%; height: 100.0%;">Central: 45.09</div>`)[0];
+                popup_6d140c935ad0f4e77043be62346cc514.setContent(html_36e94f6c9387126730f934e595e65b37);
+            
+        
+
+        marker_6731f6d4738936a714b9096a160fa797.bindPopup(popup_6d140c935ad0f4e77043be62346cc514)
+        ;
+
+        
+    
+    
+        function geo_json_5c9934265b51bf7af36aebdb80fbae8f_styler(feature) {
+            switch(feature.properties.Location) {
+                default:
+                    return {"color": "black", "fillColor": "orange", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_5c9934265b51bf7af36aebdb80fbae8f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_5c9934265b51bf7af36aebdb80fbae8f = L.geoJson(null, {
+                onEachFeature: geo_json_5c9934265b51bf7af36aebdb80fbae8f_onEachFeature,
+            
+                style: geo_json_5c9934265b51bf7af36aebdb80fbae8f_styler,
+        });
+
+        function geo_json_5c9934265b51bf7af36aebdb80fbae8f_add (data) {
+            geo_json_5c9934265b51bf7af36aebdb80fbae8f
+                .addData(data);
+        }
+            geo_json_5c9934265b51bf7af36aebdb80fbae8f_add({"features": [{"geometry": {"coordinates": [[[35.0, 36.0], [39.0, 36.0], [39.0, 39.0], [35.0, 39.0], [35.0, 36.0]]], "type": "Polygon"}, "properties": {"Location": "Central Anatolia"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_5c9934265b51bf7af36aebdb80fbae8f.addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var marker_36115302619bddb09e5d99b598d1b280 = L.marker(
+                [36.0, 35.0],
+                {}
+            ).addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var div_icon_64cf312a4206adc830cac5222a51eb8d = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027background-color: white; padding: 5px; border-radius: 5px; font-size: 12px;\u0027\u003eCentral Anatolia: 54.58\u003c/div\u003e"});
+            marker_36115302619bddb09e5d99b598d1b280.setIcon(div_icon_64cf312a4206adc830cac5222a51eb8d);
+        
+    
+        var popup_b591f03d3ea1dc498c55e35c63166881 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e811194955d51d0835c2d0742b137af6 = $(`<div id="html_e811194955d51d0835c2d0742b137af6" style="width: 100.0%; height: 100.0%;">Central Anatolia: 54.58</div>`)[0];
+                popup_b591f03d3ea1dc498c55e35c63166881.setContent(html_e811194955d51d0835c2d0742b137af6);
+            
+        
+
+        marker_36115302619bddb09e5d99b598d1b280.bindPopup(popup_b591f03d3ea1dc498c55e35c63166881)
+        ;
+
+        
+    
+    
+        function geo_json_246778a7c1785a12bac141a2b56578e2_styler(feature) {
+            switch(feature.properties.Location) {
+                default:
+                    return {"color": "black", "fillColor": "darkred", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_246778a7c1785a12bac141a2b56578e2_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_246778a7c1785a12bac141a2b56578e2 = L.geoJson(null, {
+                onEachFeature: geo_json_246778a7c1785a12bac141a2b56578e2_onEachFeature,
+            
+                style: geo_json_246778a7c1785a12bac141a2b56578e2_styler,
+        });
+
+        function geo_json_246778a7c1785a12bac141a2b56578e2_add (data) {
+            geo_json_246778a7c1785a12bac141a2b56578e2
+                .addData(data);
+        }
+            geo_json_246778a7c1785a12bac141a2b56578e2_add({"features": [{"geometry": {"coordinates": [[[39.0, 36.0], [42.0, 36.0], [42.0, 39.0], [39.0, 39.0], [39.0, 36.0]]], "type": "Polygon"}, "properties": {"Location": "Central East Anatolia"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_246778a7c1785a12bac141a2b56578e2.addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var marker_3aa40ad8059f5066723271259c8b1343 = L.marker(
+                [36.0, 39.0],
+                {}
+            ).addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var div_icon_ea6f7d560c15b96a51142551cee85261 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027background-color: white; padding: 5px; border-radius: 5px; font-size: 12px;\u0027\u003eCentral East Anatolia: 86.87\u003c/div\u003e"});
+            marker_3aa40ad8059f5066723271259c8b1343.setIcon(div_icon_ea6f7d560c15b96a51142551cee85261);
+        
+    
+        var popup_50ea9549b7064216e60fbdf6ffa03881 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bd4883fc40c6fc8514d87c1615ba7059 = $(`<div id="html_bd4883fc40c6fc8514d87c1615ba7059" style="width: 100.0%; height: 100.0%;">Central East Anatolia: 86.87</div>`)[0];
+                popup_50ea9549b7064216e60fbdf6ffa03881.setContent(html_bd4883fc40c6fc8514d87c1615ba7059);
+            
+        
+
+        marker_3aa40ad8059f5066723271259c8b1343.bindPopup(popup_50ea9549b7064216e60fbdf6ffa03881)
+        ;
+
+        
+    
+    
+        function geo_json_44ce51ac90603a1e505320ef30d81d3d_styler(feature) {
+            switch(feature.properties.Location) {
+                default:
+                    return {"color": "black", "fillColor": "red", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_44ce51ac90603a1e505320ef30d81d3d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_44ce51ac90603a1e505320ef30d81d3d = L.geoJson(null, {
+                onEachFeature: geo_json_44ce51ac90603a1e505320ef30d81d3d_onEachFeature,
+            
+                style: geo_json_44ce51ac90603a1e505320ef30d81d3d_styler,
+        });
+
+        function geo_json_44ce51ac90603a1e505320ef30d81d3d_add (data) {
+            geo_json_44ce51ac90603a1e505320ef30d81d3d
+                .addData(data);
+        }
+            geo_json_44ce51ac90603a1e505320ef30d81d3d_add({"features": [{"geometry": {"coordinates": [[[42.0, 36.0], [45.0, 36.0], [45.0, 39.0], [42.0, 39.0], [42.0, 36.0]]], "type": "Polygon"}, "properties": {"Location": "East"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_44ce51ac90603a1e505320ef30d81d3d.addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var marker_5d2ada81ec1e28b23a285a7b99633bd4 = L.marker(
+                [36.0, 42.0],
+                {}
+            ).addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var div_icon_2720c91dddd82ddccf24bae270982c3c = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027background-color: white; padding: 5px; border-radius: 5px; font-size: 12px;\u0027\u003eEast: 76.78\u003c/div\u003e"});
+            marker_5d2ada81ec1e28b23a285a7b99633bd4.setIcon(div_icon_2720c91dddd82ddccf24bae270982c3c);
+        
+    
+        var popup_ede573030266f0aea4787b8366eb2b53 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dc85084e31c712aa3ee1dcf9c694864f = $(`<div id="html_dc85084e31c712aa3ee1dcf9c694864f" style="width: 100.0%; height: 100.0%;">East: 76.78</div>`)[0];
+                popup_ede573030266f0aea4787b8366eb2b53.setContent(html_dc85084e31c712aa3ee1dcf9c694864f);
+            
+        
+
+        marker_5d2ada81ec1e28b23a285a7b99633bd4.bindPopup(popup_ede573030266f0aea4787b8366eb2b53)
+        ;
+
+        
+    
+    
+        function geo_json_5d649ffd3a88cb4086b9a5e63a5d5076_styler(feature) {
+            switch(feature.properties.Location) {
+                default:
+                    return {"color": "black", "fillColor": "orange", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_5d649ffd3a88cb4086b9a5e63a5d5076_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_5d649ffd3a88cb4086b9a5e63a5d5076 = L.geoJson(null, {
+                onEachFeature: geo_json_5d649ffd3a88cb4086b9a5e63a5d5076_onEachFeature,
+            
+                style: geo_json_5d649ffd3a88cb4086b9a5e63a5d5076_styler,
+        });
+
+        function geo_json_5d649ffd3a88cb4086b9a5e63a5d5076_add (data) {
+            geo_json_5d649ffd3a88cb4086b9a5e63a5d5076
+                .addData(data);
+        }
+            geo_json_5d649ffd3a88cb4086b9a5e63a5d5076_add({"features": [{"geometry": {"coordinates": [[[26.0, 39.0], [30.0, 39.0], [30.0, 42.0], [26.0, 42.0], [26.0, 39.0]]], "type": "Polygon"}, "properties": {"Location": "West Marmara"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_5d649ffd3a88cb4086b9a5e63a5d5076.addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var marker_5c1fc55f306e82bcd150da53c900b7ce = L.marker(
+                [39.0, 26.0],
+                {}
+            ).addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var div_icon_03baf69fdbe021895352fc174ffe778f = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027background-color: white; padding: 5px; border-radius: 5px; font-size: 12px;\u0027\u003eWest Marmara: 42.91\u003c/div\u003e"});
+            marker_5c1fc55f306e82bcd150da53c900b7ce.setIcon(div_icon_03baf69fdbe021895352fc174ffe778f);
+        
+    
+        var popup_082478872f7bcfe073ca1dfb18e24054 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_011ae8c21e9c4ffb02e77754630a1696 = $(`<div id="html_011ae8c21e9c4ffb02e77754630a1696" style="width: 100.0%; height: 100.0%;">West Marmara: 42.91</div>`)[0];
+                popup_082478872f7bcfe073ca1dfb18e24054.setContent(html_011ae8c21e9c4ffb02e77754630a1696);
+            
+        
+
+        marker_5c1fc55f306e82bcd150da53c900b7ce.bindPopup(popup_082478872f7bcfe073ca1dfb18e24054)
+        ;
+
+        
+    
+    
+        function geo_json_0cffd6513a390f73d3822ee651630e5d_styler(feature) {
+            switch(feature.properties.Location) {
+                default:
+                    return {"color": "black", "fillColor": "orange", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_0cffd6513a390f73d3822ee651630e5d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_0cffd6513a390f73d3822ee651630e5d = L.geoJson(null, {
+                onEachFeature: geo_json_0cffd6513a390f73d3822ee651630e5d_onEachFeature,
+            
+                style: geo_json_0cffd6513a390f73d3822ee651630e5d_styler,
+        });
+
+        function geo_json_0cffd6513a390f73d3822ee651630e5d_add (data) {
+            geo_json_0cffd6513a390f73d3822ee651630e5d
+                .addData(data);
+        }
+            geo_json_0cffd6513a390f73d3822ee651630e5d_add({"features": [{"geometry": {"coordinates": [[[30.0, 39.0], [35.0, 39.0], [35.0, 42.0], [30.0, 42.0], [30.0, 39.0]]], "type": "Polygon"}, "properties": {"Location": "East Marmara"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_0cffd6513a390f73d3822ee651630e5d.addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var marker_630248a36fe6ee2bf04915cba69f0ebb = L.marker(
+                [39.0, 30.0],
+                {}
+            ).addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var div_icon_b73d5c4af4bef73a110f68061831b4a3 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027background-color: white; padding: 5px; border-radius: 5px; font-size: 12px;\u0027\u003eEast Marmara: 53.52\u003c/div\u003e"});
+            marker_630248a36fe6ee2bf04915cba69f0ebb.setIcon(div_icon_b73d5c4af4bef73a110f68061831b4a3);
+        
+    
+        var popup_9b65e34836fb14a77b813b372faf9ad1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7ae8d9011e549445cc761042df4ee1c9 = $(`<div id="html_7ae8d9011e549445cc761042df4ee1c9" style="width: 100.0%; height: 100.0%;">East Marmara: 53.52</div>`)[0];
+                popup_9b65e34836fb14a77b813b372faf9ad1.setContent(html_7ae8d9011e549445cc761042df4ee1c9);
+            
+        
+
+        marker_630248a36fe6ee2bf04915cba69f0ebb.bindPopup(popup_9b65e34836fb14a77b813b372faf9ad1)
+        ;
+
+        
+    
+    
+        function geo_json_48b0b018516a5831d1c79d710d67cf60_styler(feature) {
+            switch(feature.properties.Location) {
+                default:
+                    return {"color": "black", "fillColor": "orange", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_48b0b018516a5831d1c79d710d67cf60_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_48b0b018516a5831d1c79d710d67cf60 = L.geoJson(null, {
+                onEachFeature: geo_json_48b0b018516a5831d1c79d710d67cf60_onEachFeature,
+            
+                style: geo_json_48b0b018516a5831d1c79d710d67cf60_styler,
+        });
+
+        function geo_json_48b0b018516a5831d1c79d710d67cf60_add (data) {
+            geo_json_48b0b018516a5831d1c79d710d67cf60
+                .addData(data);
+        }
+            geo_json_48b0b018516a5831d1c79d710d67cf60_add({"features": [{"geometry": {"coordinates": [[[35.0, 39.0], [39.0, 39.0], [39.0, 42.0], [35.0, 42.0], [35.0, 39.0]]], "type": "Polygon"}, "properties": {"Location": "West Black Sea"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_48b0b018516a5831d1c79d710d67cf60.addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var marker_1dc87d3f65dfc67c3ef987950a54937b = L.marker(
+                [39.0, 35.0],
+                {}
+            ).addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var div_icon_81ae2951885a130c919363dcf3f3b7c4 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027background-color: white; padding: 5px; border-radius: 5px; font-size: 12px;\u0027\u003eWest Black Sea: 51.09\u003c/div\u003e"});
+            marker_1dc87d3f65dfc67c3ef987950a54937b.setIcon(div_icon_81ae2951885a130c919363dcf3f3b7c4);
+        
+    
+        var popup_e5541f73e4c7c1b5bae5d5854d829359 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a0bab4f4b304eb218b5548eb986beb5c = $(`<div id="html_a0bab4f4b304eb218b5548eb986beb5c" style="width: 100.0%; height: 100.0%;">West Black Sea: 51.09</div>`)[0];
+                popup_e5541f73e4c7c1b5bae5d5854d829359.setContent(html_a0bab4f4b304eb218b5548eb986beb5c);
+            
+        
+
+        marker_1dc87d3f65dfc67c3ef987950a54937b.bindPopup(popup_e5541f73e4c7c1b5bae5d5854d829359)
+        ;
+
+        
+    
+    
+        function geo_json_7e21591d6c237ce03f4a5bb04cb83e4d_styler(feature) {
+            switch(feature.properties.Location) {
+                default:
+                    return {"color": "black", "fillColor": "orange", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_7e21591d6c237ce03f4a5bb04cb83e4d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7e21591d6c237ce03f4a5bb04cb83e4d = L.geoJson(null, {
+                onEachFeature: geo_json_7e21591d6c237ce03f4a5bb04cb83e4d_onEachFeature,
+            
+                style: geo_json_7e21591d6c237ce03f4a5bb04cb83e4d_styler,
+        });
+
+        function geo_json_7e21591d6c237ce03f4a5bb04cb83e4d_add (data) {
+            geo_json_7e21591d6c237ce03f4a5bb04cb83e4d
+                .addData(data);
+        }
+            geo_json_7e21591d6c237ce03f4a5bb04cb83e4d_add({"features": [{"geometry": {"coordinates": [[[39.0, 39.0], [42.0, 39.0], [42.0, 42.0], [39.0, 42.0], [39.0, 39.0]]], "type": "Polygon"}, "properties": {"Location": "East Black Sea"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_7e21591d6c237ce03f4a5bb04cb83e4d.addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var marker_83bb218188aa02be6b90f93579bdb8a8 = L.marker(
+                [39.0, 39.0],
+                {}
+            ).addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var div_icon_b33e7c710def94faa01a9806c4ab1e9b = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027background-color: white; padding: 5px; border-radius: 5px; font-size: 12px;\u0027\u003eEast Black Sea: 56.16\u003c/div\u003e"});
+            marker_83bb218188aa02be6b90f93579bdb8a8.setIcon(div_icon_b33e7c710def94faa01a9806c4ab1e9b);
+        
+    
+        var popup_b2f51ec7dbbd27a0989dd0e76d274b5c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8c1ae540a02416dbfedb349f9390ec63 = $(`<div id="html_8c1ae540a02416dbfedb349f9390ec63" style="width: 100.0%; height: 100.0%;">East Black Sea: 56.16</div>`)[0];
+                popup_b2f51ec7dbbd27a0989dd0e76d274b5c.setContent(html_8c1ae540a02416dbfedb349f9390ec63);
+            
+        
+
+        marker_83bb218188aa02be6b90f93579bdb8a8.bindPopup(popup_b2f51ec7dbbd27a0989dd0e76d274b5c)
+        ;
+
+        
+    
+    
+        function geo_json_977f131b64d9b1833f231cf44ee85585_styler(feature) {
+            switch(feature.properties.Location) {
+                default:
+                    return {"color": "black", "fillColor": "darkred", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_977f131b64d9b1833f231cf44ee85585_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_977f131b64d9b1833f231cf44ee85585 = L.geoJson(null, {
+                onEachFeature: geo_json_977f131b64d9b1833f231cf44ee85585_onEachFeature,
+            
+                style: geo_json_977f131b64d9b1833f231cf44ee85585_styler,
+        });
+
+        function geo_json_977f131b64d9b1833f231cf44ee85585_add (data) {
+            geo_json_977f131b64d9b1833f231cf44ee85585
+                .addData(data);
+        }
+            geo_json_977f131b64d9b1833f231cf44ee85585_add({"features": [{"geometry": {"coordinates": [[[42.0, 39.0], [45.0, 39.0], [45.0, 42.0], [42.0, 42.0], [42.0, 39.0]]], "type": "Polygon"}, "properties": {"Location": "Northeast Anatolia"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_977f131b64d9b1833f231cf44ee85585.addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var marker_cf2528802179a90bbec073c0e6423834 = L.marker(
+                [39.0, 42.0],
+                {}
+            ).addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var div_icon_c4b3c76b08c0d77c7c9276c5a2e61704 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027background-color: white; padding: 5px; border-radius: 5px; font-size: 12px;\u0027\u003eNortheast Anatolia: 88.45\u003c/div\u003e"});
+            marker_cf2528802179a90bbec073c0e6423834.setIcon(div_icon_c4b3c76b08c0d77c7c9276c5a2e61704);
+        
+    
+        var popup_35af5e4f9413cc25215e2a87af50c714 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2556f25706949d4a58819eb009849650 = $(`<div id="html_2556f25706949d4a58819eb009849650" style="width: 100.0%; height: 100.0%;">Northeast Anatolia: 88.45</div>`)[0];
+                popup_35af5e4f9413cc25215e2a87af50c714.setContent(html_2556f25706949d4a58819eb009849650);
+            
+        
+
+        marker_cf2528802179a90bbec073c0e6423834.bindPopup(popup_35af5e4f9413cc25215e2a87af50c714)
+        ;
+
+        
+    
+    
+        function geo_json_5191cce81fa8c84edbbccbc54f136581_styler(feature) {
+            switch(feature.properties.Location) {
+                default:
+                    return {"color": "black", "fillColor": "darkred", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_5191cce81fa8c84edbbccbc54f136581_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_5191cce81fa8c84edbbccbc54f136581 = L.geoJson(null, {
+                onEachFeature: geo_json_5191cce81fa8c84edbbccbc54f136581_onEachFeature,
+            
+                style: geo_json_5191cce81fa8c84edbbccbc54f136581_styler,
+        });
+
+        function geo_json_5191cce81fa8c84edbbccbc54f136581_add (data) {
+            geo_json_5191cce81fa8c84edbbccbc54f136581
+                .addData(data);
+        }
+            geo_json_5191cce81fa8c84edbbccbc54f136581_add({"features": [{"geometry": {"coordinates": [[[39.0, 36.0], [42.0, 36.0], [42.0, 39.0], [39.0, 39.0], [39.0, 36.0]]], "type": "Polygon"}, "properties": {"Location": "Southeast Anatolia"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_5191cce81fa8c84edbbccbc54f136581.addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var marker_acd87623d2af45760be4bae35506682b = L.marker(
+                [36.0, 39.0],
+                {}
+            ).addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var div_icon_497aa911a6be63e747d9fb4a46ebed5a = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027background-color: white; padding: 5px; border-radius: 5px; font-size: 12px;\u0027\u003eSoutheast Anatolia: 109.69\u003c/div\u003e"});
+            marker_acd87623d2af45760be4bae35506682b.setIcon(div_icon_497aa911a6be63e747d9fb4a46ebed5a);
+        
+    
+        var popup_8ec4ba624bb1556ec6a54e4afc69f5a9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9660e24ecfe9c307460a03abeaaf7d22 = $(`<div id="html_9660e24ecfe9c307460a03abeaaf7d22" style="width: 100.0%; height: 100.0%;">Southeast Anatolia: 109.69</div>`)[0];
+                popup_8ec4ba624bb1556ec6a54e4afc69f5a9.setContent(html_9660e24ecfe9c307460a03abeaaf7d22);
+            
+        
+
+        marker_acd87623d2af45760be4bae35506682b.bindPopup(popup_8ec4ba624bb1556ec6a54e4afc69f5a9)
+        ;
+
+        
+    
+    
+        function geo_json_3579c3f58ac41adc36e3533ef174f3f5_styler(feature) {
+            switch(feature.properties.Location) {
+                default:
+                    return {"color": "black", "fillColor": "red", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_3579c3f58ac41adc36e3533ef174f3f5_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_3579c3f58ac41adc36e3533ef174f3f5 = L.geoJson(null, {
+                onEachFeature: geo_json_3579c3f58ac41adc36e3533ef174f3f5_onEachFeature,
+            
+                style: geo_json_3579c3f58ac41adc36e3533ef174f3f5_styler,
+        });
+
+        function geo_json_3579c3f58ac41adc36e3533ef174f3f5_add (data) {
+            geo_json_3579c3f58ac41adc36e3533ef174f3f5
+                .addData(data);
+        }
+            geo_json_3579c3f58ac41adc36e3533ef174f3f5_add({"features": [{"geometry": {"coordinates": [[[35.0, 36.0], [39.0, 36.0], [39.0, 39.0], [35.0, 39.0], [35.0, 36.0]]], "type": "Polygon"}, "properties": {"Location": "Mediterranean"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_3579c3f58ac41adc36e3533ef174f3f5.addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var marker_0c6fceae1d155539b301eb7048dbb04c = L.marker(
+                [36.0, 35.0],
+                {}
+            ).addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var div_icon_6df2671392c534510bdd442f231dfe4e = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027background-color: white; padding: 5px; border-radius: 5px; font-size: 12px;\u0027\u003eMediterranean: 62.11\u003c/div\u003e"});
+            marker_0c6fceae1d155539b301eb7048dbb04c.setIcon(div_icon_6df2671392c534510bdd442f231dfe4e);
+        
+    
+        var popup_3c71cfcf6d5fcd7200d9ab781f28a401 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dd279611bc0d90b86259e78db5dae07b = $(`<div id="html_dd279611bc0d90b86259e78db5dae07b" style="width: 100.0%; height: 100.0%;">Mediterranean: 62.11</div>`)[0];
+                popup_3c71cfcf6d5fcd7200d9ab781f28a401.setContent(html_dd279611bc0d90b86259e78db5dae07b);
+            
+        
+
+        marker_0c6fceae1d155539b301eb7048dbb04c.bindPopup(popup_3c71cfcf6d5fcd7200d9ab781f28a401)
+        ;
+
+        
+    
+    
+        function geo_json_0d089bf66f5ebe81edec0ca3d6aff91a_styler(feature) {
+            switch(feature.properties.Location) {
+                default:
+                    return {"color": "black", "fillColor": "orange", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_0d089bf66f5ebe81edec0ca3d6aff91a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_0d089bf66f5ebe81edec0ca3d6aff91a = L.geoJson(null, {
+                onEachFeature: geo_json_0d089bf66f5ebe81edec0ca3d6aff91a_onEachFeature,
+            
+                style: geo_json_0d089bf66f5ebe81edec0ca3d6aff91a_styler,
+        });
+
+        function geo_json_0d089bf66f5ebe81edec0ca3d6aff91a_add (data) {
+            geo_json_0d089bf66f5ebe81edec0ca3d6aff91a
+                .addData(data);
+        }
+            geo_json_0d089bf66f5ebe81edec0ca3d6aff91a_add({"features": [{"geometry": {"coordinates": [[[30.0, 42.0], [35.0, 42.0], [35.0, 45.0], [30.0, 45.0], [30.0, 42.0]]], "type": "Polygon"}, "properties": {"Location": "Istanbul"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_0d089bf66f5ebe81edec0ca3d6aff91a.addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var marker_9b79d6365f07cff5fddbb90f72f7128f = L.marker(
+                [42.0, 30.0],
+                {}
+            ).addTo(map_7f66acbe966bcb3f704573fa594b7944);
+        
+    
+            var div_icon_baa8fd4b2325e9e2b16ee60a3edff472 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027background-color: white; padding: 5px; border-radius: 5px; font-size: 12px;\u0027\u003eIstanbul: 54.81\u003c/div\u003e"});
+            marker_9b79d6365f07cff5fddbb90f72f7128f.setIcon(div_icon_baa8fd4b2325e9e2b16ee60a3edff472);
+        
+    
+        var popup_5504d4867338b0c756e81c794482fb29 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_41b0c8ca20f4ce9d41833c5b6ad4efa8 = $(`<div id="html_41b0c8ca20f4ce9d41833c5b6ad4efa8" style="width: 100.0%; height: 100.0%;">Istanbul: 54.81</div>`)[0];
+                popup_5504d4867338b0c756e81c794482fb29.setContent(html_41b0c8ca20f4ce9d41833c5b6ad4efa8);
+            
+        
+
+        marker_9b79d6365f07cff5fddbb90f72f7128f.bindPopup(popup_5504d4867338b0c756e81c794482fb29)
+        ;
+
+        
+    
+</script>
+</html>
